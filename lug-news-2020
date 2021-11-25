@@ -1,0 +1,106 @@
+Latest LUG News 2020 archived
+
+[28 December 2020]
+A new version of our lug-helper has been released! It can now download, install, and remove lutris runners! Thanks to @Termuellinator for his help adding these features. https://github.com/the-sane/lug-helper/releases/tag/v1.3
+
+[27 November 2020]
+The wine-staging patch msvcrt-Math_precision causes the char to fall through the planet and the sound goes scary scratching crazy.
+That means, a full wine-5.22 (Staging) will cause issues with SC.
+The fix came 10 hours after release, so it will not be in until the rebased 5.23 staging patches release.
+
+[12 October 2020]
+A commit in wine-5.19 caused a regression with the launcher, the launcher window stays plain white.
+Thanks to @dev_zero who found the offending commit.
+Bugreport is here: https://bugs.winehq.org/show_bug.cgi?id=49991
+
+[09 October 2020]
+There is an issue with shadows/lighting in 3.11 for RADV users.
+Here is the issue report @dev_zero created https://gitlab.freedesktop.org/mesa/mesa/-/issues/3615
+
+[07 October 2020]
+Avoid updating to launcher v1.4.5 which was pulled by CIG.
+Link to previous launcher https://install.robertsspaceindustries.com/star-citizen/RSI-Setup-1.4.4.exe
+
+[03 October 2020]
+The launcher crashes on load.
+Thats an issue by the launcher using 3d accelleration, what failed for some players.
+To prevent the crash, use a gl override option like this:
+wine "RSI Launcher.exe" "--use-gl=osmesa"
+See bugreport here: https://bugs.winehq.org/show_bug.cgi?id=49633
+
+[18 September 2020]
+@dev_zero found a commit in dxvk 1.7.1 that enabled a vulkan extension that was not fully supported in mesa(radv) for AMDgpu users.
+It was fixed by Valve's Pierre-Loup and available in the latest mesa master.
+
+[20 August 2020]
+@Yuritau found an issue with our runners dropping a thread error, when Lutris has the switch "Prefer System Libraries" set to ON.
+To get over the thread issue if you have it, you need to make sure to keep that switch OFF!
+
+Please send a log to @beniwtv about these crashes, the Lutris devs want to know about these crashes to fix their runtime.
+
+[16 August 2020]
+MangoHud has approved the changes to our little wine version string experiment to their master  
+Thanks to @dev_zero ,who did all the code work, we could improve MangoHud to show a wine version string  
+Get in touch with this great configurable game overlay hud here:
+https://github.com/flightlessmango/MangoHud
+
+[13 August 2020]
+Member @theSane has written a script that can verify the vm.max_map_count setting, as well as backup your controller settings!
+Please help test and give feedback on what else it could have!
+https://github.com/the-sane/lug-helper
+
+[02 August 2020]
+#LUG has hit 1200 members today  
+
+[19 July 2020]
+@dev_zero has made a pullrequest at MangoHud to implement the changes for a wine version string and color selection of that string.
+To test it, clone the right gitbranch:
+
+git clone -b wine2 https://github.com/gort818/MangoHud.git mangohud
+
+next join the mangohud directory and enter
+
+./build.sh build
+./build.sh package
+./build.sh install
+
+Your mangohud config is in /home/you/.config/MangoHud/MangoHud.conf .
+Visit that file and edit it for your needs.
+To show the wine version in the overlay, add wine=1 to the config file.
+To change the color, add wine_color=0x22bb88 as example to the config file as well.
+
+[05 July 2020]
+Thanks to @pstn we now have a Mumble server to test! Check it out: mumble.xndr.de
+Mumble should have packages in almost every distro, too!
+
+[03 July 2020]
+Mike_Scott solved the issue with the wine version string in MangoHud.
+After /dev/null put a lot effort in creating the backyard for a wine version string in MangoHud, Mike_Scott could fix a nasty issue.
+Expect a official MangoHud addition, that can show the current used wine version  
+
+[02 July 2020]
+Molotov spend a lot of time to investigate the microphone issue with StarCitizen.
+He made a bugreport and provided a patch to Bugzilla here:
+https://bugs.winehq.org/show_bug.cgi?id=49501
+
+[24 June 2020]
+Bug 49007 got fixed with tonights wine commits. The current version is wine-5.11-111-g1f6423f778.
+You can see the issue here: https://bugs.winehq.org/show_bug.cgi?id=49007
+You can expect up2date Lutris runners for wine-5.11 soon, wine-5.12 will run StarCitizen out of the box again.
+@molotov_sh has released an experimental runner with this patch at https://github.com/snatella/wine-runner-sc/releases/tag/wine-1f6423f7-voip
+[20 June 2020]
+New TKG runners (Wine 5.10 / 5.11) with the VOIP patches (@molotov_sh will be skipping those due to the extensive patches required, so get them here):
+
+https://github.com/Frogging-Family/wine-tkg-git/releases/tag/5.10.r0.g8648971f
+https://github.com/Frogging-Family/wine-tkg-git/releases/tag/5.11.r0.g3d9a9272
+
+[12 June 2020]
+New LUG Lutris runner with VOIP support released by @molotov_sh: https://github.com/snatella/wine-runner-sc/releases
+
+@Tatumkhamun released a tool to easily download and update LUG Lutris runners, sc-runner-updater (feedback welcome!)
+https://github.com/richardtatum/sc-runner-updater
+
+DXVK async patch to make shader compiling faster by @dev_zero
+https://github.com/gort818/dxvk/releases/download/async/dxvk-async.tar.gz
+
+Warning: Async leads to shaders missing while they are loading, and doesn't block the game. Hence, it could be regarded as cheating by anti-cheat software. While SC does not yet have anti-cheat (as far as we know), use at your own risk!
