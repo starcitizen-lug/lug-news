@@ -1,0 +1,107 @@
+[24.Nov.2021]
+#LUG is on Git now ! We will make it a central host for sharing guides, runners and infos.
+https://github.com/starcitizen-lug
+
+[20.Nov.2021]
+Wine-6.22 can run StarCitizen out of the box again. CIG disabled EAC and the wine issue got fixed before it had a bugreport.
+
+[17.Nov.2021]
+#LUG has hit 1800 members today !!!
+
+[15.Nov.2021]
+SC-3.15.1 introduced EAC, wich is not working on the current PTU:
+https://issue-council.robertsspaceindustries.com/projects/STAR-CITIZEN/issues/STARC-23611
+Wine has a regression since todays commits, still needs a bugreport on bugzilla and some bisecting to find the exact commit.
+
+[11.Nov.2021]
+@theSane added a QuickStart guide to our README here:
+https://robertsspaceindustries.com/spectrum/community/LUG/forum/149/thread/star-citizen-on-linux-information-thread-readme
+
+[06.Nov.2021]
+After 4 months, bug 51720 is fixed with wine-6.21 (Staging) !!
+StarCitizen is working out of the box again, with a default wine-staging.
+
+[19.Oct.2021]
+#LUG has hit 1700 members today !
+
+[11.Oct.2021]
+@theSane is back and has pushed the lug-helper even futher, supports the installation of dxvk-async and had a lot of tweaks and fixes.
+You get the script here: https://github.com/the-sane/lug-helper/releases
+
+[18.Sep.2021]
+While bug 51626 is on the way to get fixed, another problem turned up.
+SC performs worse and the reason is not ntdll-ForceBottomUpAlloc, rather then some other staging patch from the ntdll-* patches.
+
+[04.Sep.2021]
+The bug on ntdll-ForceBottomUpAlloc has a bugreport on Bugzilla now.
+https://bugs.winehq.org/show_bug.cgi?id=51720
+
+[17.Aug.2021]
+A new regression has been caught by @ngh bisecting wine vanilla HEAD.
+Thanks to him, we could create a bugreport and its on the way to fixland now  
+https://bugs.winehq.org/show_bug.cgi?id=51626
+
+[09.Aug.2021]
+#LUG has hit 1600 members today !
+
+[30.Jun.2021]
+The hostile patches are ntdll-ForceBottomUpAlloc, ntdll-WRITECOPY, ntdll-Builtin_Prot .
+Building wine-staging without those patches does work with StarCitizen.
+No idea, who actually found them, but @Ackurus was on it and told us.
+
+[09.Jun.2021]
+#LUG has hit 1500 members today !
+
+[08.Jun.2021]
+@TinybuttMike found out, that StarCitizen is working fine with just a plain and unmodified wine.
+Thanks a lot, Tbutt, we all ran over selfbuilt walls  
+The issues seem to be completely relaing on some wine-staging patches, and we will find them^^
+
+[05.Jun.2021]
+Wine-6.10 has released and its still not working with StarCitizen.
+It still needs a fix for this bug:
+https://bugs.winehq.org/show_bug.cgi?id=51065
+The added patches do not apply to the current wine-staging anymore and tweaking them in does not work with the game.
+For now, we relay again on Molotov's runner, wich is patched and can drive StarCitizen 100%:
+https://github.com/snatella/wine-runner-sc/releases/tag/wine-v6.6
+
+[07.May.2021]
+Bug 50992 got fixed!
+https://bugs.winehq.org/show_bug.cgi?id=50992
+Sadly it does not fix the runability with StarCitizen, we still need a patch, developed by
+@MikeScott , @Ackurus , @ngh and some other #LUG members, were Netho made it actually work.
+
+[23.Apr.2021]
+#LUG passed 1400 members today.
+
+[22.Apr.2021]
+@molotov_sh has a Lutris runner available, that is tested and works very nice with SC-3.13.
+There is a version for Fsync as well, so if you can not patch your local wine, using this runner is recommended for now.
+https://github.com/snatella/wine-runner-sc/releases/tag/wine-v6.6
+
+[15.Apr.2021]
+The SC-3.13 PTU was not loading due to a advapi32.dll error, wine has no WMIAPI implemented yet.
+Some people had a lot energy to talk about solutions, testing, debugging and writing patches, thanks to you all
+@ngh finally found the right return and made at least a stub of the missing function working, so that we can load the game again.
+https://bugs.winehq.org/show_bug.cgi?id=50992
+
+[10.Jan.2021]
+@pstn bridged all the discord rooms to matrix if you want to, you can join:
+#lug-general:xndr.de
+#lug-announcements:xndr.de
+#lug-tech-support:xndr.de
+#lug-memes:xndr.de
+#lug-screenshots:xndr.de
+Of course it's provided as a best effort service with no guarantees and discords privacy policy applies but at least you don't have to make an account there. We used https://github.com/Half-Shot/matrix-appservice-discord.
+When the new communities are out, we'll evaluate how to use them to bundle the rooms.
+Oh and as stated in spectrum: The current Matrix channel will remain unchanged, and unbridged.
+
+[07.Jan.2021]
+@Ackurus has got a working patch to fix the C++ runtime error - see https://robertsspaceindustries.com/spectrum/community/LUG/forum/194647/thread/queue-apc-patch-change-how-wineserver-handles-queu
+
+[03.Jan.2021]
+For those having issues with their rudder pedals not being available in the game, @beniwtv made a workaround script that emulates a "more complete" joystick, so the game will use it:
+https://github.com/beniwtv/evdev-spoof-device
+
+[03.Jan.2021]
+#LUG has hit 1300 Members today !
