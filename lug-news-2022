@@ -1,1 +1,37 @@
 #LUG news for 2022
+
+(Jun 13, 2022)
+Another issue popped up in wine, needs another patch to fix a bug causing the launcher to freeze at 100% cpu,
+we think due to too small heapspace size. When its not fixed in wine-7.11, we have at least a patch at hand.
+
+(May 22, 2022) 
+SC 3.17.1 currently requires a Wine patch to play. 
+Work is going on to add that to upstream Wine, but in the meantime, you can build with this patch, 
+or use one of the pre-compiled versions from GloriousEggroll or RawFox, available from the lug-helper.
+
+(March 20, 2022) 
+Note to Nvidia users: DXVK v1.9.3+ seems to only work for non-RTX cards. 
+We recommend using DXVK v1.9.2 installed from the LUG Helper. Alternatively, try a patched version of DXVK from gnusenpai, 
+also available in the Helper. Note that this patched version may not work with other games.
+
+(March 20, 2022) 
+Note to Nvidia users: wine versions 7.3+ have been problematic for some users. 
+Issues vary but errors may include virtual_setup_exception stack overflow when compiling shaders. 
+We recommend the GE 7.2 release if you are experiencing problems or crashes.
+
+(March 6, 2022) 
+Note to Nvidia users: Driver v495 causes issues for most people. 
+If you have unresolvable performance issues with 510, try 470.
+
+(Feb 27, 2022) 
+Glorious Eggroll runners are now based on Proton experimental instead of wine staging. 
+The release version numbers no longer correspond to wine version numbers. 
+The major version number reflects the Proton version it is based on. The numbers after the dashes only reflect GE releases/patches.
+
+(Feb 12, 2022) 
+Easy Anti-Cheat is live. CIG is aware of the problem but there is still no ETA. 
+There is a workaround, but we can't officially recommend it. There are currently no consequences that we are aware of for using the workaround, 
+but CIG has said that eventually people will be kicked for tripping EAC. Ask in any of our social channels or use the LUG Helper.
+
+(Dec 15 2021) 
+DXVK version 1.9.2L-3e64e1b can cause cache corruption problems. We recommend using either 1.9.2L or a newer version.
