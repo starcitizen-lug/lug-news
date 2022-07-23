@@ -1,5 +1,8 @@
 #LUG news for 2022
 
+(Jul 21, 2022)
+#LUG passed 2300 members today :)
+
 (Jun 13, 2022)
 Another issue popped up in wine, needs another patch to fix a bug causing the launcher to freeze at 100% cpu,
 we think due to too small heapspace size. When its not fixed in wine-7.11, we have at least a patch at hand.
